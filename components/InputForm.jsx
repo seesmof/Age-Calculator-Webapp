@@ -1,6 +1,13 @@
-import iconArrow from "@/public/assets/images/icon-arrow.svg";
+"use client";
+
+import { useRef, useState } from "react";
 
 const InputForm = () => {
+  const dayRef = useRef();
+  const monthRef = useRef();
+  const yearRef = useRef();
+  const [birthDate, setBirthDate] = useState(null);
+
   return (
     <>
       <div className="grid grid-cols-3 gap-3">
@@ -16,6 +23,7 @@ const InputForm = () => {
             id="day"
             name="day"
             className="border px-3 py-4 accent-neutral-800 rounded-xl font-bold text-xl"
+            ref={dayRef}
           />
         </div>
         <div className="flex flex-col space-y-1">
@@ -30,6 +38,7 @@ const InputForm = () => {
             id="Month"
             name="Month"
             className="border px-3 py-4 accent-neutral-800 rounded-xl font-bold text-xl"
+            ref={monthRef}
           />
         </div>
         <div className="flex flex-col space-y-1">
@@ -44,16 +53,28 @@ const InputForm = () => {
             id="Year"
             name="Year"
             className="border px-3 py-4 accent-neutral-800 rounded-xl font-bold text-xl"
+            ref={yearRef}
           />
         </div>
       </div>
 
-      <div className="relative py-4">
-        <img
-          src="@/public/assets/images/icon-arrow.svg"
-          alt=""
-          className="p-4 bg-violet-600"
-        />
+      <div className="relative self-center py-4">
+        <button className="bg-violet-600 rounded-full p-5">
+          <img
+            src="/assets/images/icon-arrow.svg"
+            alt=""
+            className="w-10 h-10"
+            onClick={() => {
+              window.alert(
+                dayRef.current.value +
+                  "/" +
+                  monthRef.current.value +
+                  "/" +
+                  yearRef.current.value
+              );
+            }}
+          />
+        </button>
       </div>
     </>
   );
