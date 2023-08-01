@@ -1,6 +1,6 @@
 import React from "react";
 
-const AgeOutput = ({ years, months, days, ...rest }) => {
+const AgeOutput = ({ years, months, days }) => {
   return (
     <>
       <div className="flex flex-col space-y-2 font-extrabold italic text-5xl">
