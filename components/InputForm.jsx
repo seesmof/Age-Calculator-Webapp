@@ -19,13 +19,25 @@ const InputForm = () => {
       yearRef.current.value,
     ];
     const today = new Date();
-    const years = today.getFullYear() - year;
-    const months = today.getMonth() - month;
-    const days = today.getDate() - day;
 
-    setYears(years);
-    setMonths(months);
-    setDays(days);
+    const birthDate = new Date(`${year}-${month}-${day}`);
+    const timeDiff = today.getTime() - birthDate.getTime();
+
+    if (timeDiff < 0) {
+      // Invalid birth date provided
+      console.error("Invalid birth date");
+      return;
+    }
+
+    const ageDays = Math.floor(timeDiff / (1000 * 3600 * 24));
+    const ageYears = Math.floor(ageDays / 365);
+    const remainingDays = ageDays % 365;
+    const ageMonths = Math.floor(remainingDays / 31);
+    const remainingDaysInMonth = remainingDays % 31;
+
+    setYears(ageYears);
+    setMonths(ageMonths);
+    setDays(remainingDaysInMonth);
 
     setIsAge(true);
   };
