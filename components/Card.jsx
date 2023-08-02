@@ -43,7 +43,7 @@ const Card = () => {
 
   return (
     <>
-      <div className="flex rounded-3xl rounded-br-[7rem] mt-24 bg-white text-black flex-col py-10 p-6">
+      <div className="flex rounded-3xl rounded-br-[7rem] bg-white text-black flex-col max-w-2xl py-10 p-6">
         <form className="grid grid-cols-3 gap-3">
           <div className="flex flex-col space-y-1">
             <label
@@ -99,7 +99,7 @@ const Card = () => {
         </form>
         <div className="relative w-full flex flex-col items-center justify-center py-6">
           <div className="h-[2px] absolute z-10 bg-neutral-200 w-full"></div>
-          <button className="bg-violet-600 z-20 self-center rounded-full p-5">
+          <button className="bg-violet-600 z-20 self-center md:self-end rounded-full p-5">
             <img
               src="/assets/images/icon-arrow.svg"
               alt=""

@@ -3,7 +3,7 @@ import Card from "@/components/Card";
 const MainPage = () => {
   return (
     <>
-      <div className="min-h-screen bg-[#f0f0f0] p-4">
+      <div className="min-h-screen flex justify-center items-center bg-[#f0f0f0] p-4">
         <Card />
       </div>
     </>
