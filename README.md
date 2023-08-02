@@ -38,7 +38,7 @@ This repository contains an age calculator component that outputs your age in ye
 ## Links
 
 - [Live Preview](https://seesmof.github.io/age-calculator-app/)
-- [Icon](https://www.flaticon.com/free-icons/)
+- [Icon](https://www.flaticon.com/free-icons/caveman)
 
 ## License
 
