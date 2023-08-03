@@ -3,7 +3,4 @@
 @tailwind utilities;
 
 @layer components {
-  .inputField {
-    @apply border px-3 py-4 accent-neutral-800 rounded-xl font-bold text-xl focus:accent-violet-600;
-  }
 }
