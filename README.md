@@ -42,6 +42,6 @@ This repository contains an age calculator component that outputs your age in ye
 
 ## License
 
-This project is licensed under the [MIT License](./LICENSE).
+This project is [Public Domain](./LICENSE).
 
 <p align="right"><a href="#readme-top"><strong>Back to top</strong></a></p>
